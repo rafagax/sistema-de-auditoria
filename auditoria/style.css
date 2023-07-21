@@ -1,0 +1,452 @@
+
+#Mensualidad , #Construccion {
+	display: none;
+}
+
+button#Mensualidades, button#Otrosingresos, button#Indicadores , button#Metricas {	
+	border: 10px solid #BDBDBD;
+	padding: 8px 10px;
+	border-radius: 60px;
+	font-size: 25px;
+	height: 100px;
+	width: 200px;
+	margin-top: 100px;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+button#Inicio{
+	
+	margin-bottom: -86px;
+    padding: 0px 15px;
+    border-radius: 60px;
+    font-size: 15px;
+    height: 46px;
+    width: 100px;
+    margin-top: 50PX, 50PX,;
+    display: flex;
+    justify-content: end;
+
+}
+div#header{
+display: flex;
+    justify-content: space-between;
+}
+
+#Botones {
+	
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: end;
+}
+section table td,
+    section table th {
+        color: rgb(8, 8, 8);
+    }
+
+/* Estilos para el encabezado */
+header img {
+	width: 150px;
+	height: 100px;
+
+  }
+
+  #header_img {
+	float: left;
+  }
+header {
+
+	
+	background-color: #e3e8ec;
+	margin: 0 0 ;
+	
+}
+h1 {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+    
+}    
+/* Estilos para los títulos de sección */
+h2 {
+	color: #2196F3; 
+	margin: 0;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+	margin-bottom: 0px;
+	
+}
+h3 {
+	color: #2196F3; 
+	
+	
+}
+h4 {
+	color: #2196F3; 
+	margin: 0;
+}
+
+#idCliente{
+display: flex;
+text-align: center;
+}
+
+
+#localidad{
+	width: 250PX;
+}
+
+#nombreCliente{
+	width: 350PX;
+}
+#direccionFacturacion{
+	width: 500PX;
+}
+
+#PlanyMonto{
+	display: flex;
+text-align: center;
+margin-top: 20px;
+}
+#Cargar{
+	margin-left: 20PX;
+	margin-top: 20px;
+	display: flex;
+}
+#pagoButton{
+	margin-left: 20PX;
+	padding: 15px;
+	margin-top: 0px;
+	text-align: center;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+.cont {
+	display: flex;
+	justify-content: flex-end;
+  }
+
+/* ajustes de imagenes de articulos mas importantes*/
+
+.more-import img {
+	width: 200;
+	height: 150;
+	margin: 5px;
+}
+.more-import  {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 37px;
+    padding-top: -6px;
+    padding-left: 45px;
+    text-align: center;
+
+}	
+
+
+#artc-mas-usados{
+	display: flex;
+justify-content: center;
+}
+/*   stilos para ajustar las 4 section */
+
+section {
+	margin: 10px auto;
+	width: 90%;
+}
+
+.top-section {
+	display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+	padding: 10 px;
+	margin-bottom: -50px;
+}
+
+
+
+/* Estilos para los formularios */
+form {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin: 5px;
+	
+	height: 20px;
+	display: flex;
+}
+input#busqueda {
+	border: 3px solid #BDBDBD;
+    padding: -13px;
+    border-radius: 22px;
+    font-size: 21px;
+	height: 15px;
+	
+
+}	
+	
+input[type="text"],
+input[type="number"],
+textarea,
+
+select {
+	display: flex;
+	border: 1px solid #BDBDBD;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	
+  width: 110px;
+}
+
+input[type="submit"],
+button {
+	background-color: #2196F3;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 0px;
+	cursor: pointer;
+	margin: 10px;
+	height: 25px;
+	margin-top: 0px;
+}
+
+.botonesmetricas {
+
+ display: flex;
+}
+input#telefono {
+	display: flex;
+    border: 1px solid #BDBDBD;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 15px;
+}
+
+input#fechadePago,
+button {
+  border: 1px solid #BDBDBD;
+  padding: 3px 10px; /* Ajusta el valor del padding según tus necesidades */
+  border-radius: 0px;
+  font-size: 12px;
+  height: 30px;
+  width: 100px;
+  margin-top: 0px;
+  
+}
+input#fechadePago{
+	
+  height: 15px;
+}
+
+input#NumeroFactura{
+	
+  height: 15px;
+}
+
+input#codigoCliente{
+	
+  height: 15px;
+}
+select#opcion{
+	height: 25px;
+}
+/* Estilo para la sección que contiene la tabla */
+section {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+  }
+  
+  /* Estilo para la tabla de productos */
+  table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 800px;
+  }
+  
+  /* Estilo para las celdas de la tabla */
+  th, td {
+	padding: 12px 15px;
+  }
+  
+  /* Estilo para las celdas de encabezado */
+  th {
+	background-color: #0074D9;
+	color: #fff;
+	text-align: left;
+  }
+  
+
+  /* Estilo para las filas impares */
+  tbody tr:nth-child(odd) {
+	background-color: #f2f2f2;
+  }
+  
+  /* Estilo para las imágenes de los productos */
+  img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  width: 500px;
+  }
+  
+  /* Estilo para el precio y valor total */
+  td:nth-child(6),
+  td:nth-child(7) {
+	font-weight: bold;
+  }
+  
+  /* Estilo para el precio c/u */
+  td:nth-child(6) {
+	color: #0074D9;
+  }
+  
+  /* Estilo para el valor total */
+  td:nth-child(7) {
+	color: #2ECC40;
+  }
+  section {
+	margin: auto auto  ;
+	text-align: center;
+  }
+  
+  h2 {
+	font-size: 28px;
+	margin-bottom: 10px;
+	margin-top: 30px;
+	color: #0074D9;
+  }
+  
+  ----------------------------
+  body {
+    background-color: #C9E6F2;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkcyan;
+}
+
+.clientes-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #FFFFFF;
+	color: lightseagreen;
+}
+
+th {
+    background-color: lightblue;
+    color: #FFFFFF;
+}
+
+.clientes-container td:first-child {
+    color: #0000FF;
+}
+
+.estado-pago {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.pagados, .pendientes {
+    text-align: center;
+}
+
+.pagados p {
+    color: green;
+    font-size: 24px;
+}
+
+.pendientes p {
+    color: red;
+    font-size: 24px;
+}
+------------
+.estado-pago {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.pagados, .pendientes {
+    text-align: center;
+}
+
+.pagados p {
+    color: green;
+    font-size: 24px;
+}
+
+.pendientes p {
+    color: red;
+    font-size: 24px;
+}
+
+.graficas {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.grafica-cobrados {
+    text-align: center;
+}
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.slice {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#slice1 {
+    clip: rect(0, 100px, 200px, 0);
+    background-color: #00FF00;
+}
+
+#slice2 {
+    clip: rect(0, 200px, 200px, 100px);
+    background-color: #FF0000;
+}

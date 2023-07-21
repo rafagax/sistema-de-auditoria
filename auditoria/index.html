@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sistema de Auditoria Externo</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
+
+</head>
+<body>
+	
+	<header id="header">
+		<img id="header_img" src="imagenes/logo4.png" alt="Logo de la empresa" width="200" height="150">
+		<h1>Sistema de Indicadores y Auditoria</h1>
+	</header>
+	
+	<main>
+		<section id="Botones">
+			<button type="submit" id="Mensualidades">Mensualidades</button>
+			<button type="submit" id="Otrosingresos">Otro Ingresos</button>
+			<button type="submit" id="Indicadores">Indicadores</button>
+			<button type="submit" id="Inicio">Inicio</button>
+			<button type="submit" id="Metricas">Metricas</button>
+		</section>
+		
+		<section id="Mensualidad">
+			<div id="header">
+				<h2>Información del Cliente</h2> 
+			</div>
+			
+			<form>
+				<label for="idCliente">ID del Cliente:</label>
+				<input type="text" id="idCliente" name="idCliente">
+			  
+				<label for="nombreCliente">Nombre del Cliente:</label>
+				<input type="text" id="nombreCliente" name="nombreCliente">
+			  
+				 <label for="localidad">Localidad:</label>
+				 <input type="text" id="localidad" name="localidad">
+			  
+				<label for="telefono">Teléfono:</label>
+				<input type="tel" id="telefono" name="telefono">
+			  
+				<div id="PlanyMonto">
+					<label for="opcionPlan">Plan de Internet:</label>
+					<select id="opcionPlan" name="opcionPlan">
+						<option value="opcion1">PLAN 80M_25_</option>
+						<option value="opcion2">PLAN 100M_32_</option>
+						<option value="opcion3">PLAN 300M_39_</option>
+						<option value="opcion4">PLAN PYME 100M</option>
+					</select>
+					<label for="Monto">Plan Precio:</label>
+					<input type="text" id="Monto" name="MontodelPlan" placeholder="Monto del Plan" required>
+				</div>
+	
+				<label for="opcionTipo">Tipo de Cliente:</label>
+				<select id="opcionTipoCliente" name="opcionTipoCliente">
+					<option value="" disabled selected>Tipo de cliente</option>
+					<option value="opcion1">Residencial</option>
+					<option value="opcion2">Pyme</option>
+				</select>
+	
+				<label for="opcionTipoPago">Tipo de Pago:</label>
+				<select id="opcionTipoPago" name="opcionTipoPago">
+					<option value="" disabled selected>Tipo de Pago</option>
+					<option value="opcion1">Efectivo</option>
+					<option value="opcion2">Zelle</option>
+					<option value="opcion3">Paypal</option>
+					 <option value="opcion4">Pago Movil</option>
+					<option value="opcion5">Binance</option>
+				</select>
+	
+				<p id="enunciado" style="display: none;">Enunciado personalizado</p>
+	
+				<div id="Cargar">
+					<label for="NumeroFactura">NumeroFactura:</label>
+					<input type="text" id="NumeroFactura" name="NumeroFactura" placeholder="Numero de Factura" required><br>
+	
+					<label for="FechadePago">Fecha de Pago:</label>
+					<input type="date" id="fechadePago" name="fecha" placeholder="Fecha de Pago" required><br>
+	
+					<button type="submit" id="pagoButton">Cargar</button>
+				</div>
+			</form>
+		</section>
+		
+		<section id="OtrosIngresos">
+			<div id="header">
+				<h2>Cargar Factura de Otros ingresos</h2> 
+			</div>
+			<form id="cliente-form">
+				<div id="idCliente">
+					<label for="codigoCliente">ID Cliente:</label>
+					<input type="text" id="codigoCliente" name="codigoCliente" placeholder="ID del cliente" required><br>
+					<button type="submit" id="buscarButton">Buscar</button>
+				</div>
+	
+				<label for="nombreCliente">Cliente:</label>
+				<input type="text" id="nombreCliente" name="nombreCliente" placeholder="Nombre del cliente" required><br>
+	
+				<div>
+					<div id="PlanyMonto">
+						<label for="opcionTipoIngreso">Tipo de ingreso:</label>
+						<select id="opcionTipoIngreso" name="opcionTipoIngreso">
+							<option value="" disabled selected>---------------------</option>
+							<option value="opcion1">Metraje Extra</option>
+							<option value="opcion2">Prorateo</option>
+							<option value="opcion3">Soporte Tecnico</option>
+							<option value="opcion4">Otro Ingreso</option>
+						</select>
+						<label for="MontoIngreso">Monto a Facturar:</label>
+						<input type="text" id="MontoIngreso" name="MontodelIngreso" placeholder="Monto a Facturar" required><br>
+					</div>
+	
+					<label for="opcionTipoPago">Tipo de Pago:</label>
+					<select id="opcionTipoPago" name="opcionTipoPago">
+						<option value="" disabled selected>Tipo de Pago</option>
+						<option value="opcion1">Efectivo</option>
+						<option value="opcion2">Zelle</option>
+						<option value="opcion3">Paypal</option>
+						<option value="opcion4">Pago Movil</option>
+						<option value="opcion5">Binance</option>
+					</select>
+	
+					<p id="enunciado" style="display: none;">Enunciado personalizado</p>
+	
+					<label for="opcionTipoCliente">Tipo de Cliente:</label>
+					<select id="opcionTipoCliente" name="opcionTipoCliente">
+						<option value="" disabled selected>---------------------</option>
+						<option value="opcion1">Residencial</option>
+						<option value="opcion2">Pyme</option>
+					</select>
+	
+					<p id="enunciado" style="display: none;">Enunciado personalizado</p>
+				</div>
+	
+				<div id="Cargar">
+					<label for="NumeroFactura">NumeroFactura:</label>
+					<input type="text" id="NumeroFactura" name="NumeroFactura" placeholder="Numero de Factura" required><br>
+					<label for="FechadePago">Fecha de Pago:</label>
+					<input type="date" id="fechadePago" name="fecha" placeholder="Fecha de Pago" required><br>
+					<button type="submit" id="guardarButton">Guardar</button>
+				</div>
+			</form>
+		</section>
+	
+		<section id="Construccion"> 
+			<section>
+				
+				<h1>Clientes por zona - Graficas (Top 10)</h1>
+			<div> 
+				<DIV class = "botonesmetricas">
+					<button type="submit" id="Activos">Activos</button>
+					<button type="submit" id="Cancelados">Cancelados</button>
+					<button type="submit" id="Suspendidos">Suspendidos</button>
+					<button type="submit" id="Gratis">Gratis</button>
+					<button type="submit" id="Total">Total General</button>
+				</DIV>
+				<div>
+					<canvas id="myChart"></canvas>
+				</div>
+				<div>
+					<canvas id="myChart1"></canvas>
+				</div>
+				<div>
+					<canvas id="myChart2"></canvas>
+				</div>
+				<div>
+					<canvas id="myChart3"></canvas>
+				</div>
+				<div>
+					<canvas id="myChart4"></canvas>
+				</div>
+			</div>
+				<div class="clientes-container">
+					<!--<table>
+						<tr>
+							<th>Cantidad de Clientes</th>
+							<th>Zona</th>
+							<th>Ingreso Mensual</th>
+						</tr>
+						<tr>
+							<td>210</td>
+							<td>Matacaballo</td>
+							<td>$5000</td>
+						</tr>
+						<tr>
+							<td>180</td>
+							<td>Jabillar</td>
+							<td>$4500</td>
+						</tr>
+						<tr>
+							<td>180</td>
+							<td>Pantin</td>
+							<td>$400</td>
+						</tr>
+						<tr>
+							<td>140</td>
+							<td>Saman Tarazonero</td>
+							<td>$400</td>
+						</tr>
+						<tr>
+							<td>120</td>
+							<td>Palma real</td>
+							<td>$400</td>
+						</tr>
+						<tr>
+							<td>110</td>
+							<td>Prados</td>
+							<td>$400</td>
+						</tr>
+						 ... Continúa con el resto de los clientes -->
+					</table>
+				</div>
+	
+				<section class="estado-pago">
+					
+				<!--<div class="pagados">
+						<h2>Total de clientes cobrados por mensualidad:</h2>
+						<p>1550</p>
+					</div>
+					<div class="pendientes">
+						<h2>Clientes que faltan por pagar:</h2>
+						<p>480</p>
+					</div>-->
+				</section>
+	
+				<section class="graficas">
+					<div class="grafica-cobrados">
+						
+						
+					
+				</section>
+			</section>
+		</section>
+		
+		<section id="Construccionn"> <img id="header_img" src="imagenes/SITIO-EN-CONSTRUCCION.jpg" alt="Logo de la empresa" width="200" height="150">
+			<h1></h1> </section>
+	</main>
+	<script src="index.js"></script>
+	
+	
+	
+</body>
+</html>
+
